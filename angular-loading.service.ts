@@ -11,6 +11,10 @@ export class LoadingService {
   constructor() { }
 
   start(observable: Observable<any>): void {
+    if (this.observables.length === 0) {
+      this.loadingStart.next();
+    }
+
     this.observables.push(observable);
     observable.subscribe(x => {
       const index = this.observables.indexOf(observable);
@@ -20,10 +24,6 @@ export class LoadingService {
         this.loadingEnd.next();
       }
     });
-
-    if (this.isLoading) {
-      this.loadingStart.next();
-    }
   }
 
   get isLoading(): boolean {

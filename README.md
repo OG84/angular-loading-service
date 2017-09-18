@@ -3,8 +3,8 @@ Angular 4+ Loading Service
 
 ## Features
 
-- emits an event when any http request is started
-- emits an event when all http requests are done
+- emits an event when the first http request is started
+- emits an event when all http requests have finnished
 - push your own observables to the service to have them additionally tracked too
 
 ## Usage
@@ -54,3 +54,7 @@ export class ExampleComponent implements OnInit {
 ```
 this.loadingService.start(yourObservable);
 ```
+
+### You can also use the boolean property isLoading
+
+```const isLoading = this.loadingService.isLoading;```
