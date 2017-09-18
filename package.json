@@ -2,6 +2,10 @@
   "name": "angular-loading-service",
   "version": "0.0.1",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OG84/angular-loading-service"
+  },
   "dependencies": {
     "@angular/http": "^4.2.4",
     "rxjs": "^5.4.2",
