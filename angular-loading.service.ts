@@ -21,7 +21,7 @@ export class LoadingService {
       }
     });
 
-    if (this.observables.length >= 0) {
+    if (this.isLoading) {
       this.loadingStart.next();
     }
   }
